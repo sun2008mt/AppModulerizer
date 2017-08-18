@@ -1,0 +1,77 @@
+def supportVersion = "26.+"
+//def rxAndroidVersion = "2.0.1"
+def rxAndroidVersion = "1.2.1"
+//def rxBindingVersion = "2.0.0"
+def rxBindingVersion = "0.4.0"
+def retrofitVersion = "2.3.0"
+def okHttpVersion = "3.8.1"
+def stethoVersion = "1.5.0"
+def butterKnifeVersion = "8.8.1"
+def daggerVersion = "2.11"
+def ormLiteVersion = "5.0"
+def fastJsonVersion = "1.1.62.android"
+def streamVersion = "1.1.8"
+def retrofitFastjsonConverterVersion = "2.1.0"
+def smartRefreshLayoutVersion = "1.0.3"
+def javaxAnnotationVersion = "10.0-b28"
+
+project.ext {
+    android = [
+            compileSdkVersion: 26,
+            buildToolsVersion: "26.0.1",
+            applicationId    : "com.geonoon.xing",                 //applicationId不能为空,每个部分不能以数字等开头
+            minSdkVersion    : 15,
+            targetSdkVersion : 26,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    dependencies = [
+            //android-support
+            "support-v4"  : "com.android.support:support-v4:${supportVersion}",
+            "appcompat-v7": "com.android.support:appcompat-v7:${supportVersion}",
+            "design"      : "com.android.support:design:${supportVersion}",
+            "recyclerview": "com.android.support:recyclerview-v7:${supportVersion}",
+            "cardview"    : "com.android.support:cardview-v7:${supportVersion}",
+
+            //java8-support
+            "stream": "com.annimon:stream:${streamVersion}",
+
+            //rx
+//            "rxandroid"                   : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+//            "rxbinding"                   : "com.jakewharton.rxbinding2:rxbinding:${rxBindingVersion}",
+//            "rxbinding-support-v4"        : "com.jakewharton.rxbinding2:rxbinding-support-v4:${rxBindingVersion}",
+//            "rxbinding-appcompat-v7"      : "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:${rxBindingVersion}",
+//            "rxbinding-design"            : "com.jakewharton.rxbinding2:rxbinding-design:${rxBindingVersion}",
+//            "rxbinding-recyclerview-v7"   : "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:${rxBindingVersion}",
+            "rxandroid"                   : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            "rxbinding"                   : "com.jakewharton.rxbinding:rxbinding:${rxBindingVersion}",
+            "rxbinding-support-v4"        : "com.jakewharton.rxbinding:rxbinding-support-v4:${rxBindingVersion}",
+            "rxbinding-appcompat-v7"      : "com.jakewharton.rxbinding:rxbinding-appcompat-v7:${rxBindingVersion}",
+            "rxbinding-design"            : "com.jakewharton.rxbinding:rxbinding-design:${rxBindingVersion}",
+            "rxbinding-recyclerview-v7"   : "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:${rxBindingVersion}",
+
+            //retrofit
+            "retrofit"                    : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            "adapter-rxjava"              : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+
+            //dagger
+            "dagger"                      : "com.google.dagger:dagger:${daggerVersion}",
+            "dagger-compiler"             : "com.google.dagger:dagger-compiler:${daggerVersion}",
+
+            //facebook
+            "stetho"                      : "com.facebook.stetho:stetho:${stethoVersion}",
+            "stetho-okhttp3"              : "com.facebook.stetho:stetho-okhttp3:${stethoVersion}",
+
+            //others
+            "okhttp3-logging-interceptor" : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            "ormlite-android"             : "com.j256.ormlite:ormlite-android:${ormLiteVersion}",
+            "fastjson"                    : "com.alibaba:fastjson:${fastJsonVersion}",
+            "butterknife"                 : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            "butterknife-compiler"        : "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+            "retrofit2-fastjson-converter": "org.ligboy.retrofit2:converter-fastjson-android:${retrofitFastjsonConverterVersion}",
+            "SmartRefreshLayout"          : "com.scwang.smartrefresh:SmartRefreshLayout:${smartRefreshLayoutVersion}",
+            "SmartRefreshHeader"          : "com.scwang.smartrefresh:SmartRefreshHeader:${smartRefreshLayoutVersion}",
+            "javax-annotation"            : "org.glassfish:javax.annotation:${javaxAnnotationVersion}"
+    ]
+}
